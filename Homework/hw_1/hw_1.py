@@ -40,13 +40,13 @@ class Oxygen(Element):
 
 
 oxygen = Oxygen();
+
 temp_oxygen = int(input("Please input temperature for oxygen in C: " ))
+print(oxygen.agg_state(temp_oxygen))
+
 input_temp = float(input("Please input temperature for convert in C: " ))
 scale_input = input('(k) or (f)?: ')
 convertTemp = Element();
-
 print(convertTemp.convert_temp(input_temp, scale_input))
 
-
-print(oxygen.agg_state(input_temp))
 
