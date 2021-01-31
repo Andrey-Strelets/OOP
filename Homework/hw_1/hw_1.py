@@ -23,6 +23,19 @@ class Element(object):
 			return "liquid"
 		else:
 			return "Gas"
+	# def convert_temp(self, t, scale):
+	# 	final_temp = 0.0
+	# 	if scale == 'k':
+	# 		final_temp = t + 273.15
+	# 	elif scale == 'f':
+	# 		final_temp = (t * 1.8) + 32
+	# 	else:
+	# 		raise Exception('Bad Temperature Scale')
+	# 	return final_temp
+
+
+
+class Oxygen(Element):
 	def convert_temp(self, t, scale):
 		final_temp = 0.0
 		if scale == 'k':
@@ -33,20 +46,16 @@ class Element(object):
 			raise Exception('Bad Temperature Scale')
 		return final_temp
 
-
-
-class Oxygen(Element):
-	pass
-
-
-oxygen = Oxygen();
+oxygen = Element();
 
 temp_oxygen = int(input("Please input temperature for oxygen in C: " ))
 print(oxygen.agg_state(temp_oxygen))
 
+
+convertTemp = Oxygen();
 input_temp = float(input("Please input temperature for convert in C: " ))
 scale_input = input('(k) or (f)?: ')
-convertTemp = Element();
+
 print(convertTemp.convert_temp(input_temp, scale_input))
 
 
